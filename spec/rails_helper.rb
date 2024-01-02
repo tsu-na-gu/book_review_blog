@@ -64,6 +64,11 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.before(:each, type: :system) do
+    driver = :selenium_chrome_headless
+    driver = :selenium_chrome if ENV['SHOW_CHROME']
+    driven_by(driver)
+  end
 end
 
 Shoulda::Matchers.configure do |config|

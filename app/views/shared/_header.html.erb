@@ -1,3 +1,9 @@
-<header class="flex justify-center bg-blue-500 w-full">
-  <h1 class="text-3xl font-bold text-white py-2"><%= link_to "Tsu-na-gu's book reviews", root_path %></h1>
+<header>
+  <div class="flex md:items-center md:justify-betwee bg-slate-800">
+    <div class="flex-1 ml-10 my-4">
+      <h1 class="text-2xl font-medium text-white py-2 leading-7"><%= link_to "Tsu-na-gu's book reviews", root_path %></h1>
+      <p class=" text-gray-400">このサイトは私の読んだ本の感想を皆様に共有しています。</p>
+    </div>
+    <%= render 'shared/search_form' %>
+  </div>
 </header>

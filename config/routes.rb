@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'images/show'
   get 'search/index'
   get 'pages/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -18,4 +19,6 @@ Rails.application.routes.draw do
   get '/search', to: 'search#index'
 
   get '/tags/:name', to: 'tags#show', name: /[-a-z0-9_+]*/, as: :tag
+
+  resources :images, only: :show
 end

@@ -75,3 +75,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'webdrivers'
 end
+
+gem "bcrypt", "~> 3.1"

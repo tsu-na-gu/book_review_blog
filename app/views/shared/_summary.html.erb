@@ -1,18 +1,23 @@
   <article>
     <div class="border rounded-xl mt-6 flex items-center bg-white">
       <div class="w-2/3 p-4">
-        <h1><%= link_to page.title, page_path(page.slug), class:"mt-4 text-3xl font-bold tracking-tight text-gray-900" %></h1>
+        <h1><%= link_to page.title, page_path(page.slug), class:"mt-4 text-3xl font-bold tracking-tight text-gray-900 hover:text-teal-400" %></h1>
         <div class="mt-4">
           <span class="font-medium text-gray-500">著者：</span>
           <span class="text-gray-400"><%= page.author %></span>
         </div>
         <div class="mt-1">
           <span class="font-medium text-gray-500">出版社：</span>
-          <span class="text-gray-400"><%= link_to page.publisher, page.publisher_url, target:"_blank" %></span>
+          <span class="text-gray-400 hover:text-teal-800"><%= link_to page.publisher, page.publisher_url, target:"_blank" %></span>
         </div>
         <div>
           <span class="font-medium text-gray-500">作成日：</span>
           <span class="text-gray-400"><%= page.created_at.to_date.to_fs(:local) %></span>
+
+        </div>
+        <div>
+          <span class="font-medium text-gray-500">タグ：</span>
+          <span class="text-gray-400 hover:text-teal-800"><%= render partial: 'shared/tags', locals: { page: page } %></span>
 
         </div>
         <p class="mt-4 text-gray-500"><%= page.summary %></p>

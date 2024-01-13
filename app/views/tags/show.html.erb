@@ -1,0 +1,6 @@
+<div class="border-b-2 border-white pb-5">
+  <h3 class="text-3xl font-medium leading-6 text-gray-600">Page tagged with:  <span class="font bold text-gray-800"><%= @tag.name %></span></h3>
+</div>
+<% @pages.each do |page| %>
+  <%= render partial: 'shared/summary', locals: {page: page} %>
+<% end %>

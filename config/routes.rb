@@ -16,4 +16,6 @@ Rails.application.routes.draw do
       as: :page
 
   get '/search', to: 'search#index'
+
+  get '/tags/:name', to: 'tags#show', name: /[-a-z0-9_+]*/, as: :tag
 end

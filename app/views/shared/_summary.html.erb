@@ -1,30 +1,31 @@
-  <article>
-    <div class="border rounded-xl mt-6 flex items-center bg-white">
-      <div class="w-2/3 p-4">
-        <h1><%= link_to page.title, page_path(page.slug), class:"mt-4 text-3xl font-bold tracking-tight text-gray-900 hover:text-teal-400" %></h1>
-        <div class="mt-4">
-          <span class="font-medium text-gray-500">著者：</span>
-          <span class="text-gray-400"><%= page.author %></span>
+  <article class="mt-10 px-2 py-1.5 rounded-xl  bg-white">
+        <div class="mt-2 mb-4 ml-3">
+          <h1><%= link_to page.title, page_path(page.slug), class:"text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 hover:text-teal-600" %></h1>
         </div>
-        <div class="mt-1">
-          <span class="font-medium text-gray-500">出版社：</span>
-          <span class="text-gray-400 hover:text-teal-800"><%= link_to page.publisher, page.publisher_url, target:"_blank" %></span>
-        </div>
-        <div>
-          <span class="font-medium text-gray-500">作成日：</span>
-          <span class="text-gray-400"><%= page.created_at.to_date.to_fs(:local) %></span>
+    <div class="flex flex-col items-top sm:flex-row">
+        <div class="sm:w-2/3 pl-3 pr-3 sm:pr-10 leading-7">
+          <div class="mt-2">
+            <span class="font-medium text-gray-500">著者：</span>
+            <span class="text-gray-400"><%= page.author %></span>
+          </div>
+          <div class="mt-1">
+            <span class="font-medium text-gray-500">出版社：</span>
+            <span class="text-gray-400 hover:text-teal-800"><%= link_to page.publisher, page.publisher_url, target:"_blank" %></span>
+          </div>
+          <div>
+            <span class="font-medium text-gray-500">作成日：</span>
+            <span class="text-gray-400"><%= page.created_at.to_date.to_fs(:local) %></span>
 
-        </div>
-        <div>
-          <span class="font-medium text-gray-500">タグ：</span>
-          <span class="text-gray-400 hover:text-teal-800"><%= render partial: 'shared/tags', locals: { page: page } %></span>
+          </div>
+          <div>
+            <span class="font-medium text-gray-500">タグ：</span>
+            <span class="text-gray-400 hover:text-teal-800"><%= render partial: 'shared/tags', locals: { page: page } %></span>
 
+          </div>
+          <p class="mt-4 text-gray-500"><%= page.summary %></p>
         </div>
-        <p class="mt-4 text-gray-500"><%= page.summary %></p>
-
-      </div>
-      <div class="w-1/3">
-        <%= image_tag 'confirmation-page-01-hero.jpg', class:'rounded-tr-lg rounded-br-lg' %>
-      </div>
+        <div class="sm:w-1/3 mt-4 sm:mt-0">
+          <%= image_tag 'confirmation-page-01-hero.jpg', class:'rounded-lg' %>
+        </div>
     </div>
   </article>

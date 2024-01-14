@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   get 'images/show'
   get 'search/index'
   get 'pages/show'
@@ -21,4 +22,8 @@ Rails.application.routes.draw do
   get '/tags/:name', to: 'tags#show', name: /[-a-z0-9_+]*/, as: :tag
 
   resources :images, only: :show
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
 end

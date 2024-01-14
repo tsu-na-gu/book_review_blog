@@ -1,6 +1,5 @@
-<div class="border-b-2 border-white pb-5">
-  <h3 class="text-3xl font-medium leading-6 text-gray-600">Search result</h3>
-</div>
+<%= render partial: 'shared/section_heading', locals: {section_title: "Search: " + @term.to_s } %>
+
 <% if @pages.any? %>
   <% @pages.each do |page| %>
     <%= render 'shared/summary', page: page %>

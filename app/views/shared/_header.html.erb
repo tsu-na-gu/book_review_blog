@@ -1,9 +1,11 @@
 <header>
-  <div class="flex md:items-center md:justify-betwee bg-slate-800">
-    <div class="flex-1 ml-10 my-4">
-      <h1 class="text-2xl font-medium text-white py-2 leading-7"><%= link_to "Tsu-na-gu's book reviews", root_path %></h1>
-      <p class=" text-gray-400">このサイトは私の読んだ本の感想を皆様に共有しています。</p>
+  <div class="flex flex-col py-4 border-b border-white w-full justify-between sm:flex-row sm:items-center bg-slate-800">
+    <div class="mx-auto sm:mx-0 sm:ml-20 my-4">
+      <h1 class="text-3xl font-medium text-white py-2 hover:text-teal-600 leading-7"><%= link_to "Tsu-na-gu's book reviews", root_path %></h1>
+      <p class="text-slate-400">私の読んだ本の感想を皆様に共有しています。</p>
     </div>
+    <div class="mx-auto sm:mx-0">
     <%= render 'shared/search_form' %>
+    </div>
   </div>
 </header>

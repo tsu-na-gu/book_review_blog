@@ -1,5 +1,7 @@
 User.create!(name: "Hiroaki Satou",
-            email: "hiroakisatou@outlook.com")
+            email: "hiroakisatou@outlook.com",
+             password: "password",
+             password_confirmation: "password")
 Page.create!(user_id:1,
             title:"Grokking Web Application Security",
             slug:"grokking-web-application-security",
@@ -41,7 +43,7 @@ Page.create!(user_id:1,
              summary: "独習シリーズといえば、わかりやすく網羅性のある言語解説で定評のあるシリーズである。C#やPHPの本などはわりと評価されているが、そのRuby版もあなどれない出来である。プログラミング初心者にはチェリー本をおすすめするが、以前Rubyを勉強したことがある人がRubyを勉強したいという用途にはぴったりな出来の本になっている。",
             content:"山田 祥寛さんといえば、様々な分野のプログラミングの本を手掛けるテクニカルライターだが、そのクオリティがどれもわりと高いことで有名である。私はRubyにチェリー本で入門したが、1年ぐらいずっとPythonを書いていたのですっかり忘れてしまっていた。そんな私にこの本はぴったりであった。なぜかと言えば、このシリーズはコードとその実行結果をちゃんと載せて解説しているからである。いちいちコードを入力して確かめるなくても、作者の解説がすらすら入ってくる。2冊目にコードを書いて入門する必要はないので、それで良いのだと思う。私はこの本を読んだあとLeet Codeというアルゴリズムとデータ構造の問題が多くあるサイトをRubyで解いて実際のコーディング力を磨いた。私は最近やっとプログラマーになるのは止めて趣味でプログラミングをやろうと決めたので、だったら好きな言語でプログラミングしよう。私の一番好きな言語といったらRubyじゃないかと思ってこの本で再入門して十分に使える知識を短期間で得られたという次第である。Rubyは非常に柔軟な言語で、一冊では網羅出来ないような、こんな機能もあるのかというトピックもある。そういうわけでこの本はProcやLamdaなんかは掲載されてないので、その点は自分で調べる必要がある。チェリー本にしてもRubyの全機能を網羅しているわけではない。例えば、チェリー本に載ってなかったのか読み飛ばしてたのかわからないが、私がこの本で知ったのはStructにブロックを持たせることで、そこにメソッドが定義出来ることである。これはクラスの内部にもデータ構造として定義出来るのでクラス内部で何かの処理をモックした処理なんかを作るのに非常に便利である。まあ、使っているとこんな便利な機能もあるのかとハマっていくのがRubyに魅力でもある。ちゃんとメタプログラミングの章もあって、Railsのモデルがデータベースのテーブルに合わせてアクセサーメソッドを提供できるのは、こういうわけだよという解説がある。読みづらい本で私も全部読んでいないのでレビューには掲載予定のない、Well ground Rubyという洋書のほうが、そのようなRubyの深みにある機能には詳しい。たまにRailsを触る人などは、この本を読めばRubyの機能を1〜2週間で復習出来てしまうので、そういう意味でもうちょっと評価されても良い本だと思う。" )
 Page.create!(user_id:1,
-             title:"A Common-Sense Guide to Data Structures and Algorithms, Second Edition",
+             title:"A Common-Sense Guide to Data Structures and Algorithms",
              slug:"a-common-sense-guide-to-data-structures-and-algorithms",
              author: "Jay Wengrow",
              publisher: "The Pragmatic Bookshelf",

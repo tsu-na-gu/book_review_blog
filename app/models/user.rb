@@ -20,7 +20,7 @@ class User < ApplicationRecord
     user = User.find_by(email: email.downcase)
     return nil if user.nil?
 
-    password_hash = hash_password(password, password_salt)
+    password_hash = hash_password(password, user.password_salt)
 
     return user if password_hash == user.password_hash
   end

@@ -47,6 +47,12 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem "sassc"
+
+gem "bcrypt", "~> 3.1"
+
+gem "activeadmin", "~> 3.2"
+
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails'
@@ -76,4 +82,4 @@ group :test do
   gem 'webdrivers'
 end
 
-gem "bcrypt", "~> 3.1"
+

@@ -46,6 +46,18 @@ class Page < ApplicationRecord
     ActiveRecord::Base.connection.execute(sql)
   end
 
+  def tags_string_for_form
+    tags.ordered.map(&:name).join(', ')
+  end
+
+  def self.ransackable_attributes(auth_object = nil)
+    super
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    super
+  end
+
   private
 
   def update_tags
@@ -64,6 +76,8 @@ class Page < ApplicationRecord
       tags << Tag.find_or_create_by(name:)
     end
   end
+
+
   # def make_slug
   #   return if title.nil?
   #

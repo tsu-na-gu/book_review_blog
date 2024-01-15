@@ -33,6 +33,14 @@ class User < ApplicationRecord
     BCrypt::Engine.generate_salt
   end
 
+  def self.ransackable_attributes(auth_object = nil)
+    super
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    super
+  end
+
   private
 
   def downcase_email

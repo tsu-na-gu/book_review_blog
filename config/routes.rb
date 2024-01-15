@@ -17,7 +17,9 @@ Rails.application.routes.draw do
       slug: /[-a-z0-9+]*/,
       as: :page
 
-  get '/search', to: 'search#index'
+  get 'search/:year/:month', to: 'search#index', year: /\d{4}./, month: /\d{2}/
+  get 'search', to: 'search#index'
+
 
   get '/tags/:name', to: 'tags#show', name: /[-a-z0-9_+]*/, as: :tag
 
@@ -26,4 +28,6 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
+
+  get 'sitemap', to: 'home#sitemap'
 end

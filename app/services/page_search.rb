@@ -7,6 +7,7 @@ module PageSearch
             elsif params[:term].present?
               Page.by_term(params[:term])
             end
+
     return [] unless pages
 
     return pages.published.ordered

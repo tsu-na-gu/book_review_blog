@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_13_195014) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_15_022253) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -70,6 +70,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_13_195014) do
     t.string "author"
     t.string "publisher"
     t.string "publisher_url"
+    t.string "image_url"
     t.index ["published"], name: "index_pages_on_published"
     t.index ["slug"], name: "index_pages_on_slug", unique: true
     t.index ["title"], name: "index_pages_on_title", unique: true

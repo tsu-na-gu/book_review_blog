@@ -9,6 +9,7 @@ ActiveAdmin.register Page do
                 :summary,
                 :content,
                 :tags_string,
+                :image_url,
                 :published
 
   remove_filter :page_tags
@@ -39,6 +40,7 @@ ActiveAdmin.register Page do
       f.input :content
       f.input :tags_string, label: 'Tags', input_html: { value: f.object.tags_string_for_form }
       f.input :published
+      f.input :image_url
     end
     f.actions
   end
@@ -56,6 +58,7 @@ ActiveAdmin.register Page do
       row :summary
       row :content
       row('Tags') {|p|p.tags_string_for_form }
+      row :image_url
       row :published
     end
   end

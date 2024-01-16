@@ -1,4 +1,10 @@
 <%= render partial: 'shared/section_heading', locals: {section_title: "Book List"} %>
+<div class="flex justify-end">
+  <%= paginate @pages %>
+</div>
 <% @pages.each do |page| %>
   <%= render 'shared/summary', page:page %>
 <% end %>
+<div class="flex justify-end">
+  <%= paginate @pages %>
+</div>

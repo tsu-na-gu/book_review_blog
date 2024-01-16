@@ -392,6 +392,7 @@ DEPENDENCIES
   factory_bot_rails
   importmap-rails
   jbuilder
+  kaminari
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.2)

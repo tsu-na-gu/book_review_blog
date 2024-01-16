@@ -53,6 +53,8 @@ gem "bcrypt", "~> 3.1"
 
 gem "activeadmin", "~> 3.2"
 
+gem 'kaminari'
+
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails'

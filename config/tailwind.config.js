@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      margin: {
+        '-5': '-5rem'
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },

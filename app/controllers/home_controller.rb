@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @pages = Page.published.ordered
+    @pages = Page.published.ordered.page(params[:page])
   end
 
   def sitemap

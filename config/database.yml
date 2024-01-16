@@ -80,5 +80,5 @@ test:
 production:
   <<: *default
   database: book_review_blog_production
-  username: book_review_blog
-  password: <%= ENV["BOOK_REVIEW_BLOG_DATABASE_PASSWORD"] %>
+  username: <%= ENV["DATABASE_USER"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>

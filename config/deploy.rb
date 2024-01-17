@@ -13,10 +13,10 @@ append :linked_dirs, 'storage',
        'public/system'
 set :passenger_restart_with_touch, true
 
-namespace :deploy do
+namespace :production do
   desc 'Set environment variables'
   task :set_env_vars do
-    on roles(:app), in: :sequence, wait: 5 do
+    on roles(:app), in: :sequence, wait: 10 do
       execute :echo, "'export DATABASE_USERNAME=admin' >> ~/.bashrc"
       execute :echo, "'export DATABASE_PASSWORD=password0123blue' >> ~/.bashrc"
       execute :echo, "'export BASE_URL=book.tsu-na-gu.site' >> ~/.bashrc"

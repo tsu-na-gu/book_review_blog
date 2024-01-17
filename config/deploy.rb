@@ -1,6 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 set :application, 'book_reveiw_blog'
-set :repo_url, 'https://github.com/tsu-na-gu/book_raview_blog.git'
+set :repo_url, 'https://github.com/tsu-na-gu/book_review_blog.git'
 set :branch, 'main'
 append :linked_files, 'config/database.yml',
                                    'config/secrets.yml',
@@ -57,5 +57,5 @@ before 'deploy:starting', 'deploy:set_env_vars'
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
-set :linked_files, fetch(:linked_files, []).push('config/database.yml')
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system')
+# set :linked_files, fetch(:linked_files, []).push('config/database.yml')
+# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system')

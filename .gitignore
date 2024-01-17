@@ -38,3 +38,5 @@
 !/app/assets/builds/.keep
 
 /config/deploy.rb
+
+/shared/config/database.yml

@@ -1,0 +1,11 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  port: <%= ENV['DB_PORT'] || 5432 %>
+
+production:
+  <<: *default
+  database: book_review_blog
+  username: rails
+  password: 037c39ec22ce0f26e6996ea719583ddf

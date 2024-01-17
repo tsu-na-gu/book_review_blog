@@ -61,7 +61,7 @@
 #   }
 #
 server '178.128.31.221', user: 'rails_user', roles: %w[app db web]
-set :deploy_to, '/rails/book_review_blog'
+set :deploy_to, '/home/rails_user/book_review_blog'
 set :rails_env, 'production'
 set :pty, true
 set :ssh_options, {

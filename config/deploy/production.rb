@@ -59,7 +59,8 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-server '178.128.31.221', user: 'root', roles: %w[app db web]
+#
+server '178.128.31.221', user: 'rails_user', roles: %w[app db web]
 set :deploy_to, '/rails/book_review_blog'
 set :rails_env, 'production'
 set :pty, true

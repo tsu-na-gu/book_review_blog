@@ -13,7 +13,7 @@ append :linked_dirs, 'storage',
        'public/system'
 set :passenger_restart_with_touch, true
 
-namespace :production do
+namespace :deploy do
   desc 'Set environment variables'
   task :set_env_vars do
     on roles(:app), in: :sequence, wait: 10 do

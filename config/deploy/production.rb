@@ -60,7 +60,7 @@
 #     # password: "please use keys"
 #   }
 #
-server '165.22.50.0', user: 'rails_user', roles: %w[app db web]
+server '165.22.50.0', user: 'rails', roles: %w[app db web]
 set :deploy_to, '/home/rails/book_review_blog'
 set :rails_env, 'production'
 set :pty, true

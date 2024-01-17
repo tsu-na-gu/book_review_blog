@@ -69,8 +69,10 @@ group :development, :test do
 end
 
 group :development do
-  gem "capistrano-rails", "~> 1.6"
-  gem "capistrano-passenger", "~> 0.2.1"
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-passenger'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'spring-commands-rspec'
   gem 'web-console'

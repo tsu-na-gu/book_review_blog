@@ -13,6 +13,19 @@ append :linked_dirs, 'storage',
        'public/system'
 set :passenger_restart_with_touch, true
 
+namespace :deploy do
+  desc 'Set environment variables'
+  task :set_env_vars do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :echo, "'export DATABASE_USERNAME=admin' >> ~/.bashrc"
+      execute :echo, "'export DATABASE_PASSWORD=password0123blue' >> ~/.bashrc"
+      execute :echo, "'export BASE_URL=book.tsu-na-gu.site' >> ~/.bashrc"
+    end
+  end
+end
+
+before 'deploy:starting', 'deploy:set_env_vars'
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

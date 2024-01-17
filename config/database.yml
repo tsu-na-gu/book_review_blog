@@ -25,11 +25,11 @@ development:
   <<: *default
   database: book_review_blog_development
 
-production:
-  <<: *default
-  database: book_review_blog
-  username: rails
-  password: 037c39ec22ce0f26e6996ea719583ddf
+#production:
+#  <<: *default
+#  database: book_review_blog
+#    username: 
+#    password: 
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.

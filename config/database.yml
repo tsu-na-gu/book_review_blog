@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: book_review_blog
-  username: admin
-  password: password0123blue
+  username: postgres
+  password: 

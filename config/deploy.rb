@@ -17,8 +17,6 @@ namespace :deploy do
   desc 'Set environment variables'
   task :set_env_vars do
     on roles(:app), in: :sequence, wait: 10 do
-      execute :echo, "'export DATABASE_USERNAME=admin' >> ~/.bashrc"
-      execute :echo, "'export DATABASE_PASSWORD=password0123blue' >> ~/.bashrc"
       execute :echo, "'export BASE_URL=book.tsu-na-gu.site' >> ~/.bashrc"
     end
   end
@@ -59,3 +57,5 @@ before 'deploy:starting', 'deploy:set_env_vars'
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+set :linked_files, fetch(:linked_files, []).push('config/database.yml')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system')

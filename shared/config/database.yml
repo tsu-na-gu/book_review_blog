@@ -6,7 +6,6 @@ default: &default
 
 production:
   <<: *default
-  production:
-    database: book_review_blog
-    username: rails_user
-    password: k2rN.VFwfFCMtJM
+  database: book_review_blog
+  username: rails_user
+  password: k2rN.VFwfFCMtJM
